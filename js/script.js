@@ -94,3 +94,41 @@ document
         observer.observe(element);
 
     });
+
+    // =========================================================
+// FILTRO DO CARDÁPIO
+// =========================================================
+
+const menuButtons = document.querySelectorAll(".menu-category");
+const menuItems = document.querySelectorAll(".menu-item");
+
+menuButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const category = button.dataset.category;
+
+        // Remove ativo de todos os botões
+        menuButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        // Ativa o botão clicado
+        button.classList.add("active");
+
+        // Filtra os itens
+        menuItems.forEach(item => {
+
+            const itemCategory = item.dataset.category;
+
+            if (itemCategory === category) {
+                item.classList.remove("hidden");
+            } else {
+                item.classList.add("hidden");
+            }
+
+        });
+
+    });
+
+});
