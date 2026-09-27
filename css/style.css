@@ -219,7 +219,7 @@ h1 span {
     position: relative;
 
     background:
-        url("../assets/hero.png")
+        url("../assets/hero.webp")
         center / cover no-repeat;
 }
 
@@ -815,7 +815,7 @@ h1 span {
     position: relative;
 
     background:
-        url("../assets/hero.png")
+        url("../assets/hero.webp")
         center / cover;
 }
 
